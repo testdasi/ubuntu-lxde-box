@@ -1,4 +1,5 @@
-FROM phusion/baseimage:0.9.16
+#FROM phusion/baseimage:0.9.16
+FROM phusion/baseimage:latest
 ENV DEBIAN_FRONTEND noninteractive
 # Set correct environment variables
 ENV HOME /root
@@ -23,9 +24,11 @@ chmod +x /etc/my_init.d/firstrun.sh && \
 
 # update apt and install dependencies
 mv /root/excludes /etc/dpkg/dpkg.cfg.d/excludes && \
-apt-get update && \
+apt-get update -y && \
+apt-get upgrade -y && \
+apt-get dist-upgrade -y && \
 apt-get install -y --force-yes --no-install-recommends wget openjdk-7-jre supervisor sudo nano net-tools lxde x11vnc xvfb gtk2-engines-murrine ttf-ubuntu-font-family firefox lxterminal && \
-apt-get install -y xrdp libreoffice && \
+apt-get install -y xrdp libreoffice mc openvpn && \
 
 
 # create ubuntu user
