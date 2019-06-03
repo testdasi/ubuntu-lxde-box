@@ -27,7 +27,8 @@ mv /root/excludes /etc/dpkg/dpkg.cfg.d/excludes && \
 apt-get update -y && \
 apt-get upgrade -y && \
 apt-get dist-upgrade -y && \
-apt-get install -y --force-yes --no-install-recommends wget openjdk-7-jre supervisor sudo nano net-tools lxde x11vnc xvfb gtk2-engines-murrine ttf-ubuntu-font-family firefox lxterminal && \
+# apt-get install -y --force-yes --no-install-recommends wget openjdk-7-jre supervisor sudo nano net-tools lxde x11vnc xvfb gtk2-engines-murrine ttf-ubuntu-font-family firefox lxterminal && \
+apt-get install -y --force-yes --no-install-recommends wget supervisor sudo nano net-tools lxde x11vnc xvfb gtk2-engines-murrine ttf-ubuntu-font-family firefox lxterminal && \
 apt-get install -y xrdp libreoffice mc openvpn && \
 
 
